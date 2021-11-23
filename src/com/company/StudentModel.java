@@ -68,10 +68,10 @@ public class StudentModel {
         preparedStatement=connection.prepareStatement(sql);
         preparedStatement.setInt(1,StudentID);
         resultSet=preparedStatement.executeQuery();
-        Integer id= resultSet.getInt("Average");
+        Float id= resultSet.getFloat("Average");
         Float grade = null;
         String course = "Grade Average";
-        StudentInfoPack student = new StudentInfoPack(id, course, grade);
+        StudentInfoPack student = new StudentInfoPack(StudentID, course, id);
         return student;
     }
     public CourseInfoPack QueryForCourseAverage(Integer courseID) throws SQLException{

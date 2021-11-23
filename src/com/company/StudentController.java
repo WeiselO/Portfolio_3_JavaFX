@@ -73,7 +73,7 @@ public class StudentController {
             StudentInfoPack student = model.QueryForStudentAverage(ID);
             StudentTextfield.clear();
             StudentTextfield.appendText("Student Average Grade: \n");
-            StudentTextfield.appendText(student.ID +"\n");
+            StudentTextfield.appendText(student.grade +"\n");
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
