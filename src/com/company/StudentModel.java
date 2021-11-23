@@ -79,7 +79,7 @@ public class StudentModel {
         preparedStatement=connection.prepareStatement(sql);
         preparedStatement.setInt(1,courseID);
         resultSet=preparedStatement.executeQuery();
-        Integer average=resultSet.getInt("Average");
+        Float average=resultSet.getFloat("Average");
         Integer teacherId=null;
         CourseInfoPack course = new CourseInfoPack(courseID,teacherId,average);
         return course;
